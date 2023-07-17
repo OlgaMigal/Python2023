@@ -6,9 +6,12 @@
 # Выведите кортеж из количества журавликов, сделанных Петей, Катей и Сережей.
 
 n = 60
+
 if n % 6 != 0:
     print("Логического целочисленного решения не существует")
+
 else:
     countBoys = n // 6
     countKate = countBoys * 4
+
     print (f"n = {n} -> ({countBoys}, {countKate}, {countBoys})")
