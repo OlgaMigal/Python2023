@@ -10,4 +10,4 @@ import math
 
 x = int((-S + math.sqrt(S**2 - 4*P))/-2)
 y = int(S-x)
-print(f"x = {x}, y = {y}")
+print(f"X = {x}, Y = {y}")
