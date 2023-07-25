@@ -37,12 +37,12 @@ def letters_counter(str, dictionary):
     str = str.upper()
     result = 0
     for i in str:
-        k = ""
-        for j, v in dictionary.items():
-            k = dictionary[j].split(', ')
-            for d in k:
-                if i == d:
-                    result += j
+        key_list = ""
+        for key, value in dictionary.items():
+            key_list = dictionary[key].split(', ')
+            for element in key_list:
+                if i == element:
+                    result += key
     return result
 
 task017()
