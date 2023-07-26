@@ -6,16 +6,30 @@
 # Output: a a_1 a_2 b c a_3 a_4 d c_1 d_1 d_2
 
 
+# str = input("Введите строку: ").split()
+# result_str = ""
+# dict_str = {}
+#
+#
+# for i in str:
+#     if i not in dict_str:
+#         result_str += f'{i} '
+#     else:
+#         result_str += f"{i}_{dict_str[i]} "
+#     dict_str[i] = dict_str.get(i, 0)+1
+#
+# print(result_str)
+
+
+# Задача №27. Решение в группах
+# Пользователь вводит текст(строка). Словом считается
+# последовательность непробельных символов идущих
+# подряд, слова разделены одним или большим числом
+# пробелов. Определите, сколько различных слов
+# содержится в этом тексте.
+# Input: She sells sea shells on the sea shore The shells that she sells are sea shells I'm sure. So if she sells sea shells on the sea shore I'm sure that the shells are sea shore shells
+# Output: 13
+
 str = input("Введите строку: ").split()
-result_str = ""
-dict_str = {}
 
-
-for i in str:
-    if i not in dict_str:
-        result_str += f'{i} '
-    else:
-        result_str += f"{i}_{dict_str[i]} "
-    dict_str[i] = dict_str.get(i, 0)+1
-
-print(result_str)
+print(len(str))
