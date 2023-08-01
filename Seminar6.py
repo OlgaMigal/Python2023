@@ -63,7 +63,7 @@
 # def task043():
 #     l = int(input("Введите длину списка: "))
 #     list_m = list_creator(l)
-#
+#     print(counter(list_m))
 #
 # def list_creator(x):
 #     my_list = []
@@ -71,5 +71,51 @@
 #         my_list.append(int(input(f"Введите элемент списка из {x} элементов: ")))
 #     return my_list
 #
-0#
-# def task043()
+# def counter(my_list):
+#     counter = 0
+#     # counter = [counter+=1 for i in range(len(my_list) if my)]
+#     for i in range(len(my_list)):
+#         for j in range (i+1, len(my_list)):
+#             if my_list[i] == my_list[j]:
+#                 counter+=1
+#     return counter
+#
+#
+# task043()
+
+
+#45 Два различных натуральных числа n и m называются дружественными, если сумма делителей числа n
+# (включая 1, но исключая само n) равна числу m и наоборот. Например, 220 и 284 – дружественные числа.
+# По данному числу k выведите все пары дружественных чисел, каждое из которых не превосходит k.
+# Программа получает на вход одно натуральное число k, не превосходящее 10^5.
+# Программа должна вывести  все пары дружественных чисел, каждое из которых не превосходит k.
+# Пары необходимо выводить по одной в строке, разделяя пробелами.
+# Каждая пара должна быть выведена только один раз (перестановка чисел новую пару не дает).
+#
+# 300
+# 220 284
+
+def task045():
+    number = int(input("Введите число разумной величины :-) : "))
+    list_res = []
+    for i in range(1, number):
+        temp = find_dividers_sum(i)
+        if find_dividers_sum(temp) == i and temp>i:
+            list_res.append(i)
+            list_res.append(temp)
+            print(f"{i} и {temp} = дружественные")
+    print(*list_res)
+
+def find_dividers_sum(n):
+    divider_sum = 0
+    for i in range(1, n):
+        # print(i)
+        if n%i==0:
+            divider_sum+=i
+    return divider_sum
+
+task045()
+
+
+
+
