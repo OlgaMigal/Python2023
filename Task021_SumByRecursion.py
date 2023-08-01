@@ -3,14 +3,14 @@
 #
 # Функция не должна ничего выводить, только возвращать значение.
 
-def task020():
+def task021():
     a = int(input("Введите число a: "))
     b = int(input("Введите число b: "))
-    print(recursion_degree(a,b))
+    print(recursion_sum(a, b))
 
-def recursion_degree(m, n):
+def recursion_sum(m, n):
     if n == 0:
-        return 1
-    return(recursion_degree(m, n-1)*m)
+        return m
+    return(recursion_sum(m, n - 1)+1)
 
-task020()
+task021()
