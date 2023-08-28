@@ -13,13 +13,32 @@ def show_all():
 def search_element(name):
     with open ('Dict.txt', 'r', encoding = 'utf-8') as data:
         for line in data:
-            if name in line.split():
-                print(line)
-                break
-        else:
-            print('Такого нету')
+            if name in line:
+                print(line[:-1])
+                # break
+        if name not in data:
+            print('Такого нет, попробуйте изменить запрос')
+
+# Задача 38: Дополнить телефонный справочник возможностью изменения и удаления данных.
+# Пользователь также может ввести фамилию, и Вы должны реализовать функционал для изменения и удаления данных
+
+def change_element(name):
+    with open ('Dict.txt', 'r+', encoding = 'utf-8') as data:
+        new_data=data.readlines()
+        with open('Dict.txt', 'w+', encoding='utf-8') as data:
+
+            for line in new_data:
+                if name in line:
+                    data.write(input('Введите новые данные: '))
+                    data.write('\n')
+                else:
+                    data.write(line)
 
 
-
-
-
+def del_element(name):
+    with open('Dict.txt', 'r', encoding='utf-8') as data:
+        new_data = data.readlines()
+    with open('Dict.txt', 'w+', encoding='utf-8') as data:
+        for line in new_data:
+            if name not in line:
+                data.write(line)
