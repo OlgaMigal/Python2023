@@ -41,8 +41,6 @@ while True:
     elif command==4:
         old_name = input("Введите элемент(ы) для изменения: ")
         change_element(old_name)
-        # new_name = input("На что меняем: ")
-        # change_data_in_file(old_name, new_name)
     elif command==5:
         name = input("Введите элемент для удаления: ")
         del_element(name)
@@ -50,4 +48,3 @@ while True:
         break
     else:
         print("Ввод некорректен")
-
